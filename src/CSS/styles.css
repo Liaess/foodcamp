@@ -163,6 +163,10 @@ h5{
     display: none;
 }
 
+.buttons2{
+    display: none;
+}
+
 .selected .buttons{
     display:flex;
     position: absolute;
@@ -170,10 +174,23 @@ h5{
     top: 210px;
 }
 
+.selected .buttons2{
+    display:flex;
+    position: absolute;
+    right: 6px;
+    bottom: 5px;
+}
+
 .selected .buttons button{
     border: none;
     background-color:#fff;
 }
+
+.selected .buttons2 button{
+    border: none;
+    background-color:#fff;
+}
+
 
 .color-red{
     color: #CF2B2B;

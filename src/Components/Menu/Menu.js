@@ -1,13 +1,15 @@
 import Food from "./Food/Food"
-import Drinks from "./Drinks"
-import Dessert from "./Dessert"
+import Drinks from "./Drinks/Drink"
+// import Dessert from "./Dessert"
+import React from "react"
 
-export default function Menu(){
+export default function Menu({orderFood, setOrderFood, orderDrinks, setOrderDrinks}){
+
     return(
         <>
-            <Food />
-            <Drinks />
-            <Dessert />
+            <Food orderFood={orderFood} setOrderFood={setOrderFood}/>
+            <Drinks orderDrinks={orderDrinks} setOrderDrinks={setOrderDrinks}/>
+            {/* <Dessert orderDessert={orderDessert} setOrderDessert={setOrderDessert}/> */}
         </>
     )
 }
