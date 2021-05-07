@@ -32,13 +32,13 @@ export default function Finish({orderFood, orderDrinks, orderDesserts}){
         })
 
         let finalOrderDrinks = "";
-        orderFood.forEach((eachDrinks)=>{
-            finalOrderDrinks += eachDrinks.dish +`(X${eachDrinks.qtd})`
+        orderDrinks.forEach((eachDrinks)=>{
+            finalOrderDrinks += eachDrinks.drinks +`(X${eachDrinks.qtd})`
         })
 
         let finalOrderDesserts = "";
-        orderFood.forEach((eachDessert)=>{
-            finalOrderDesserts += eachDessert.dish +`(X${eachDessert.qtd})`
+        orderDesserts.forEach((eachDesserts)=>{
+            finalOrderDesserts += eachDesserts.desserts +`(X${eachDesserts.qtd})`
         })
 
         let text = 
@@ -46,14 +46,14 @@ export default function Finish({orderFood, orderDrinks, orderDesserts}){
         - Prato: ${finalOrderFood}
         - Bebida: ${finalOrderDrinks}
         - Sobremesa: ${finalOrderDesserts}
-        Total: R$ ${(totalFood+totalDrink+totalDessert).toFixed(2)};`
+        Total: R$ ${(totalFood+totalDrink+totalDessert).toFixed(2)}`
         const texturi = encodeURI(text);
         const linkurl = `https://wa.me/5521987972806?text=${texturi}`;
         window.location.href = linkurl; 
     }
 
     return(
-        <div className="bottom" onClick={()=> FinishOrder()} disabled={finalOrder ? false : true}>
+        <div className="bottom" onClick={()=> finalOrder ? FinishOrder() : ()=>{}}>
             <div className={finalOrder ? "color-green-button" : "button"}>
                 <h1>{finalOrder ? "Fechar pedido" : "Selecione os 3 itens para fechar o pedido"}</h1>
             </div>
