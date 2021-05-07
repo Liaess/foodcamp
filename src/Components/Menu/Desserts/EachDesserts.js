@@ -1,12 +1,12 @@
 import React from "react";
-export default function EachDrinks({drinks, desc, image, price, id, orderDrinks, setOrderDrinks}) {
+export default function EachDessert({desserts, desc, image, price, id, orderDesserts, setOrderDesserts}) {
     const [count, setCount] = React.useState(1)
     const [border, setBorder] = React.useState(false)
     
     function Select(){
         border ? Reset() : setBorder(true);
         if(border === false){
-            setOrderDrinks ([...orderDrinks, {drinks, price, qtd: count}]);
+            setOrderDesserts ([...orderDesserts, {desserts, price, qtd: count}]);
         }
     }
 
@@ -16,33 +16,33 @@ export default function EachDrinks({drinks, desc, image, price, id, orderDrinks,
             if(count === 1){
                 setBorder(false)
                 setCount(1)
-                const newOrderFood = orderDrinks.filter((item)=>item.drinks !== drinks ? true : false);
-                setOrderDrinks([...newOrderFood]);                
+                const newOrderDesserts = orderDesserts.filter((item)=>item.desserts !== desserts ? true : false);
+                setOrderDesserts([...newOrderDesserts]);
             }else{
                setCount(count -1)
-               const newOrderFood = orderDrinks.filter((item)=>item.drinks !== drinks ? true : false);
-               setOrderDrinks([...newOrderFood, {drinks, price, qtd: count-1}]);
+               const newOrderDesserts = orderDesserts.filter((item)=>item.desserts !== desserts ? true : false);
+               setOrderDesserts([...newOrderDesserts, {desserts, price, qtd: count-1}]);
             }
         }
     }
     function Increase(e){
         e.stopPropagation();
         setCount(count +1);
-        const newOrderFood = orderDrinks.filter((item)=>item.drinks !== drinks ? true : false);
-        setOrderDrinks([...newOrderFood, {drinks, price, qtd: count+1}]);
+        const newOrderDesserts = orderDesserts.filter((item)=>item.desserts !== desserts ? true : false);
+        setOrderDesserts([...newOrderDesserts, {desserts, price, qtd: count+1}]);
     }
 
     function Reset(){
         setCount(1);
-        const newOrderFood = orderDrinks.filter((item)=>item.drinks !== drinks ? true : false)
-        setOrderDrinks([...newOrderFood]);
+        const newOrderDesserts = orderDesserts.filter((item)=>item.desserts !== desserts ? true : false)
+        setOrderDesserts([...newOrderDesserts]);
         setBorder(false);
     }
 
     return(
         <div className={`ebox ${border ? "selected" : ""}`} key={id} onClick={Select}>
-            <img className="imgsize" src={image} alt={drinks}></img>
-            <h3>{drinks}</h3>
+            <img className="imgsize" src={image} alt={desserts}></img>
+            <h3>{desserts}</h3>
             <h4>{desc}</h4>
             <h5>R$ {price}</h5>
             <div className={"buttons"}>

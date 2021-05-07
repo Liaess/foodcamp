@@ -7,9 +7,7 @@ export default function EachFood({dish, desc, image, price, id, orderFood, setOr
         border ? Reset() : setBorder(true);
         if(border === false){
             setOrderFood ([...orderFood, {dish, price, qtd: count}]);
-            console.log([...orderFood, {dish, price, qtd: count}])
         }
-        console.log([...orderFood])
     }
 
     function Decrease(e){

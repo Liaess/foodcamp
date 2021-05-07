@@ -10,13 +10,18 @@ import "./CSS/styles.css";
 function App(){
     const [orderFood, setOrderFood] = React.useState([]);
     const [orderDrinks, setOrderDrinks] = React.useState([]);
-    // const [orderDessert, setOrderDessert] = React.useState([]);
+    const [orderDesserts, setOrderDesserts] = React.useState([]);
+    const [finalization, setFinalization] = React.useState([0,0,0]);
+
     return(
-        <>
+        <div className="container-size">
             <Top />
-            <Menu orderFood={orderFood} setOrderFood={setOrderFood} orderDrinks={orderDrinks} setOrderDrinks={setOrderDrinks} />
-            <Finish />
-        </>
+            <Menu   orderFood={orderFood} setOrderFood={setOrderFood} 
+                    orderDrinks={orderDrinks} setOrderDrinks={setOrderDrinks} 
+                    orderDesserts={orderDesserts} setOrderDesserts={setOrderDesserts}
+                    finalization={finalization} setFinalization={setFinalization} />
+            <Finish orderFood={orderFood} orderDrinks={orderDrinks} orderDesserts={orderDesserts} />
+        </div>
     )
 }
 

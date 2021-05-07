@@ -33,14 +33,14 @@ body{
     padding-right: 21px;
 }
 
-/* =================================================================== FOOD =================================================================== */
+/* =================================================================== CONTAINER =================================================================== */
 
 .title{
     font-size: 32px;
     font-family: 'Righteous';
-    margin-top: 122px;
     font-weight: 400;
     margin-left: 8px;
+    margin-top: 22px;
 }
 
 .boxes{
@@ -62,18 +62,11 @@ body{
     background-color: #fff;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     border: 4px solid #FFF;
-    position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    position: relative;
 }
 
-.ebox button{
-    outline: none;
-}
-
-.ebox:first-child{
-    margin-right: 8px;
-}
 
 .imgsize{
     width: 144px;
@@ -103,24 +96,8 @@ h5{
     color: #000;
 }
 
-/* =================================================================== DRINKS =================================================================== */
-
-.title2{
-    font-size: 32px;
-    font-family: 'Righteous';
-    margin-top: 35px;
-    font-weight: 400;
-    margin-left: 8px;
-}
-
-/* =================================================================== DESSERTS =================================================================== */
-
-.boxes2{
-    width: 100%;
-    height: auto;
-    display: flex;
-    margin-top: 15px;
-    overflow-x: scroll;
+.container-size{
+    margin-top: 122px;
     margin-bottom: 130px;
 }
 
@@ -153,6 +130,35 @@ h5{
     color: #fff;
 }
 
+.bottom .color-green-button{
+    display: flex;
+    width: 85%;
+    height: 61px;
+    background-color: #32B72F;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+.bottom .button .h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 185px;
+}
+
+.bottom .button h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 185px;
+}
+
 /* =================================================================== OTHERS =================================================================== */
 
 .selected{
@@ -163,34 +169,21 @@ h5{
     display: none;
 }
 
-.buttons2{
-    display: none;
-}
-
 .selected .buttons{
     display:flex;
+    border: none;
+    background-color:#fff;
+    justify-content: flex-end;
     position: absolute;
-    right: 6px;
-    top: 210px;
-}
-
-.selected .buttons2{
-    display:flex;
-    position: absolute;
-    right: 6px;
-    bottom: 5px;
+    bottom: 3px;
+    right: 5px;
 }
 
 .selected .buttons button{
+    display:flex;
     border: none;
     background-color:#fff;
 }
-
-.selected .buttons2 button{
-    border: none;
-    background-color:#fff;
-}
-
 
 .color-red{
     color: #CF2B2B;

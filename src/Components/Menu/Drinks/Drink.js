@@ -10,10 +10,10 @@ const eDrinks = [
 export default function Drinks({orderDrinks, setOrderDrinks}){
     return(
     <div className="container">
-        <div className="title2">
+        <div className="title">
             <p>Agora, sua bebida</p>
         </div>
-        <div className="boxes2">
+        <div className="boxes">
             {eDrinks.map((eDrinks) =>
                 <EachDrinks drinks={eDrinks.drinks} desc={eDrinks.desc} price={eDrinks.price} image={eDrinks.image} key={eDrinks.id} orderDrinks={orderDrinks} setOrderDrinks={setOrderDrinks}/>
             )}
